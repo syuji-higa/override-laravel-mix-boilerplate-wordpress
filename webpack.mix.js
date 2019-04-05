@@ -27,11 +27,3 @@ mix
       ]
     }
   })
-
-if (process.env.NODE_ENV === 'production') {
-  mix.then(async () => {
-    // In production, delete unnecesary files
-    fs.removeSync(`${wpContentThemeDirName}/${svgDummyModuleName}.js`)
-    fs.removeSync(`${wpContentThemeDirName}/mix-manifest.json`)
-  })
-}
